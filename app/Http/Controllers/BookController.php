@@ -13,8 +13,16 @@ class BookController extends Controller
         return view('books.index', compact('books'));
     }
 
-    public function show(Book $book)
+    public function show($book)
     {
-        return view('books.show', compact('book'));
+        $book = Book::find($book);
+
+        if (!$book) {
+            // Handle the case where the book is not found
+            abort(404); // You can customize this based on your error handling strategy
+        }
+
+        return view('books.detail', compact('book'));
     }
+
 }

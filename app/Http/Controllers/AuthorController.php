@@ -13,8 +13,8 @@ class AuthorController extends Controller
         return view('authors.index', compact('authors'));
     }
 
-    public function show(Author $author)
-    {
-        return view('authors.show', compact('author'));
-    }
+    // public function show(Author $author)
+    // {
+    //     return view('authors.show', compact('author'));
+    // }
 }
