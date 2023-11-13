@@ -23,7 +23,7 @@
                             No Author
                         @endif
                     </p>
-                    <a href="/books/detail/{book}" class="btn btn-primary">Show More</a>
+                    <a href="/books/detail/{{$book->id}}" class="btn btn-primary">Show More</a>
                 </div>
             </div>
         </div>
